@@ -26,6 +26,6 @@ Enjoyable playing!
 
 ## Installation Guide:
 1) Download Python from official site
-2) Upgrade and update pip
+2) Upgrade pip - `pip install --upgrade pip`
 3) Install "keyboard" - `pip install keyboard`
 4) Start main.py from console - python main.py

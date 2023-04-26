@@ -12,20 +12,26 @@ Enjoyable playing!
 5) Esc - Quit
 
 ## Used libraries:
-1) os
-2) random
-3) sys
-4) threading
-5) time
-6) keyboard
+- os
+- random
+- sys
+- threading
+- time
+- keyboard
 
-## Future plans:
-1) Improve render system, because of "PVM"
-2) Fix some small bugs
-3) Add Lose "screen"
+## To Do:
+- [ ] Improve render system, because of "PVM"
+- [ ] Fix some small bugs
+- [ ] Add Lose "screen"
 
 ## Installation Guide:
 1) Download Python from official site
-2) Upgrade pip - `pip install --upgrade pip`
-3) Install "keyboard" - `pip install keyboard`
+2) Upgrade pip
+```
+pip install --upgrade pip
+```
+3) Install "keyboard"
+```
+pip install keyboard
+```
 4) Start main.py from console - python main.py

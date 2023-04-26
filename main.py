@@ -12,7 +12,7 @@ game_field = [[], [], [], [], [],
               [], [], [], [], [],
               [], [], [], [], []]
 closer = False
-
+IsActive = False
 time_for_render = 0.1
 snake_length = 1
 x_snake = 0
@@ -20,8 +20,9 @@ y_snake = 0
 direction = ""
 index_previous = 0
 coin = 0
-
-IsActive = False
+symbol_player = "📀"
+symbol_coin = "😡"
+symbol_background = "🕗"
 
 
 class Graphic:
@@ -54,7 +55,7 @@ class Graphic:
         i = 0
         global closer
         while i < 25:
-            game_field[i] = "□"
+            game_field[i] = symbol_background
             i += 1
 
 
@@ -84,13 +85,13 @@ class GameLogic:
                 if y_snake == 5:
                     y_snake = 0
                 index = GameLogic.convert_coordinates_to_index(x_snake, y_snake, 5)
-                if game_field[index] == '●':
+                if game_field[index] == symbol_coin:
                     coin += 1
                     snake_length += 1
                     IsActive = False
-                if game_field[index] == '■':
+                if game_field[index] == symbol_player:
                     closer = True
-                game_field[index] = "■"
+                game_field[index] = symbol_player
 
             if direction == "Up" and y_snake > -1:
 
@@ -105,13 +106,13 @@ class GameLogic:
                     index_previous = GameLogic.convert_coordinates_to_index(x_snake_previous[step - 1],
                                                                             y_snake_previous[step - 1], 5)
                 index = GameLogic.convert_coordinates_to_index(x_snake, y_snake, 5)
-                if game_field[index] == '●':
+                if game_field[index] == symbol_coin:
                     coin += 1
                     IsActive = False
                     snake_length += 1
-                if game_field[index] == '■':
+                if game_field[index] == symbol_player:
                     closer = True
-                game_field[index] = "■"
+                game_field[index] = symbol_player
 
             if direction == "Right" and x_snake < 5:
 
@@ -123,13 +124,13 @@ class GameLogic:
                     x_snake = 0
 
                 index = GameLogic.convert_coordinates_to_index(x_snake, y_snake, 5)
-                if game_field[index] == '●':
+                if game_field[index] == symbol_coin:
                     coin += 1
                     IsActive = False
                     snake_length += 1
-                if game_field[index] == '■':
+                if game_field[index] == symbol_player:
                     closer = True
-                game_field[index] = "■"
+                game_field[index] = symbol_player
 
             if direction == "Left" and x_snake < 5:
 
@@ -141,20 +142,20 @@ class GameLogic:
                     x_snake = 4
 
                 index = GameLogic.convert_coordinates_to_index(x_snake, y_snake, 5)
-                if game_field[index] == '●':
+                if game_field[index] == symbol_coin:
                     coin += 1
                     IsActive = False
                     snake_length += 1
-                if game_field[index] == '■':
+                if game_field[index] == symbol_player:
                     closer = True
-                game_field[index] = "■"
+                game_field[index] = symbol_player
             GameLogic.coin_spawner(True)
             if direction != "":
                 step += 1
                 if step > 1:
                     index_previous = GameLogic.convert_coordinates_to_index(x_snake_previous[step - snake_length],
                                                                             y_snake_previous[step - snake_length], 5)
-                game_field[index_previous] = "□"
+                game_field[index_previous] = symbol_background
             if closer:
                 return 0
 
@@ -165,9 +166,8 @@ class GameLogic:
             x_coin = random.randint(0, 4)
             y_coin = random.randint(0, 4)
             index = GameLogic.convert_coordinates_to_index(x_coin, y_coin, 5)
-            if game_field[index] == "□":
-
-                game_field[index] = "●"
+            if game_field[index] == symbol_background:
+                game_field[index] = symbol_coin
                 IsActive = True
             else:
                 IsActive = False

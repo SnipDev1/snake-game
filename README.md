@@ -1,8 +1,8 @@
 # Description
-Hello, this is my small console-snake-game on python. 
-I have created all basic's mechanics and input from keyboard. 
-I tried to create this game, with minimum using other libraries, so I think I’ve done it.
-Enjoyable playing!
+Hello, this is my console snake game written in Python. 
+The game features all the basic mechanics and input from keyboard. 
+I aimed to create this game with minimum usage of external libraries and I believe I have achieved this. 
+I hope you enjoy playing it!
 
 ## Key bindings:
 1) W - Move Up
@@ -20,18 +20,21 @@ Enjoyable playing!
 - keyboard
 
 ## To Do:
-- [ ] Improve render system, because of "PVM"
-- [ ] Fix some small bugs
-- [ ] Add Lose "screen"
+- [ ] Improve the render system to avoid the "PVM" issue
+- [ ] Fix any remaining small bugs
+- [ ] Add a "lose" screen
 
 ## Installation Guide:
-1) Download Python from official site
-2) Upgrade pip
+1) Download Python from the official website.
+2) Upgrade pip by running the command:
 ```
 pip install --upgrade pip
 ```
-3) Install "keyboard"
+3) Install the "keyboard" library by running the command:
 ```
 pip install keyboard
 ```
-4) Start main.py from console - python main.py
+4) To start the game, navigate to the project directory and run the following command:
+```
+python main.py
+```

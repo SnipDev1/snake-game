@@ -27,7 +27,7 @@ I hope you enjoy playing it!
 - [ ] Add a "lose" screen
 
 ## Installation Guide:
-1) Download Python from the official website.
+1) Download Python(3.11.3) from the official website.
 2) Upgrade pip by running the command:
 ```
 pip install --upgrade pip

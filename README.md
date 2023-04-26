@@ -1,7 +1,9 @@
 # Description
 Hello, this is my console snake game written in Python. 
+
 The game features all the basic mechanics and input from keyboard. 
 I aimed to create this game with minimum usage of external libraries and I believe I have achieved this. 
+
 I hope you enjoy playing it!
 
 ## Key bindings:

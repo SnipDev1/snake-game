@@ -13,7 +13,7 @@ I hope you enjoy playing it!
 4) D - Move Right
 5) Esc - Quit
 
-## Used libraries:
+## Required libraries:
 - os
 - random
 - sys
